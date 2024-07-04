@@ -1,0 +1,15 @@
+services:
+  caddy:
+    image: caddy:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+    environment:
+      - ALICLOUD_ACCESS_KEY=your_access_key_id
+      - ALICLOUD_SECRET_KEY=your_access_key_secret
+    #env_file:
+     # - .env
