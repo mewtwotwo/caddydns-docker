@@ -1,6 +1,6 @@
 services:
   caddy:
-    image: caddy:latest
+    image: linkmew/caddy-alidns:latest
     ports:
       - "80:80"
       - "443:443"
