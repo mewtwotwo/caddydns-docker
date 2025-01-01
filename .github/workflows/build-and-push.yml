@@ -9,7 +9,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     env:
-      NODE_VERSION: '20'  # 设置 Node.js 版本为 20
+      NODE_VERSION: '20'  # 设置 Node.js 版本为 2
 
     steps:
       - name: Checkout code
