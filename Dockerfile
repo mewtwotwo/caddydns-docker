@@ -6,3 +6,13 @@ RUN xcaddy build \
 FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+RUN mkdir -p /etc/caddy && \
+    echo '{ \
+      "apps": { \
+        "http": { \
+          "http_port": 1080, \
+          "https_port": 1443 \
+        } \
+      } \
+    }' > /etc/caddy/global.json
