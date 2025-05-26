@@ -3,3 +3,4 @@
 # 说明
 环境参数 ALICLOUD_ACCESS_KEY和ALICLOUD_ACCESS_KEY，用法看https://github.com/caddy-dns/alidns
 Caddyfile仅供参考
+可以在Caddyfile自定义容器启动端口以使用host模式
