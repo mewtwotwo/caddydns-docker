@@ -39,4 +39,4 @@ jobs:
           push: true
           tags: |
             linkmew/caddy-alidns:latest
-            linkmew/caddy-alidns:2025-01-31
+            linkmew/caddy-alidns:http_port1080
