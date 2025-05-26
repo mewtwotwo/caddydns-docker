@@ -1,11 +1,13 @@
 {
+	http_port 1080
+	https_port 1443
 	acme_dns alidns {
 		access_key_id {env.ALICLOUD_ACCESS_KEY}
 		access_key_secret {env.ALICLOUD_SECRET_KEY}
 	}
 	email email@email.com
 }
-:443, example.com {
+example.com {
 		reverse_proxy * http://1.1.1.1:80
 		handle /admin* {
 			reverse_proxy http://1.1.1.1:80
