@@ -36,6 +36,9 @@ jobs:
             echo "digest=" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Get latest caddy:alpine digest
         id: upstream
         run: |
@@ -57,10 +60,6 @@ jobs:
       - name: Skip build
         if: steps.decide.outputs.changed == 'false'
         run: echo "Upstream digest unchanged, skip build."
-
-      - name: Set up Docker Buildx
-        if: steps.decide.outputs.changed == 'true'
-        uses: docker/setup-buildx-action@v3
 
       - name: Log in to Docker Hub
         if: steps.decide.outputs.changed == 'true'
