@@ -6,7 +6,3 @@ RUN xcaddy build \
 FROM caddy:alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
-
-ENTRYPOINT ["caddy"]
-
-CMD ["run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
